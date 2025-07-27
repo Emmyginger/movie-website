@@ -39,7 +39,10 @@ input, select, button {
   border-left: 8px solid #e74c3c;
 }
 .movie-card.comedy {
-  border-left: 8px solid #f1c40f;
+  border-left: 8px solid #e170b4;
+}
+.movie-card.romance{
+  border-left:8px solid #e47c;
 }
 .movie-card.other {
   border-left: 8px solid #5dade2;

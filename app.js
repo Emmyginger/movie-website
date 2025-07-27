@@ -57,6 +57,19 @@ class ComedyMovie extends Movie {
   }
 }
 
+class RomanceMovie extends Movie {
+  display() {
+    return `
+      <div class="movie-card romance">
+        <img src="${this.poster || 'https://via.placeholder.com/320x460?text=No+Image'}" alt="Poster">
+        <div class="movie-title">${this.title} <span style="float:right;">💖</span></div>
+        <div class="movie-meta"><span style="color:#e170b4"><b>Romance Movie</b></span><br>
+        <b>Year:</b> ${this.year} | <b>⭐</b> ${this.getUserRating()}</div>
+        <div class="movie-meta">${this.plot}</div>
+      </div>`;
+  }
+}
+
 class User {
   constructor(name) {
     this.name = name;
@@ -83,7 +96,7 @@ class Review {
 
 // ------- APP LOGIC ---------
 
-const OMDB_API_KEY = `f038945a`; // <-- Use your OMDB API key here!
+const OMDB_API_KEY = `f038945a`; 
 const OMDB_BASE = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&t=`;
 
 const user = new User('MovieFan');
@@ -99,6 +112,7 @@ function createMovieFromData(data, genre) {
   };
   if (genre === 'Action') return new ActionMovie(params);
   if (genre === 'Comedy') return new ComedyMovie(params);
+  if (genre === 'Romance') return new RomanceMovie(params);
   else return new Movie(params);
 }
 
