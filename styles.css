@@ -1,9 +1,12 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #1a1a1a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(rgba(20, 20, 20, 0.90), rgba(20, 20, 20, 0.88)), 
+    url('https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
   color: #f5f5f5;
   margin: 0;
   padding: 0 10vw;
+  min-height: 100vh;
 }
 h1 {
   text-align: center;
