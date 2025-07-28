@@ -18,9 +18,23 @@ form {
   gap: 10px;
   justify-content: center;
 }
+
 input, select, button {
   padding: 0.5em;
   font-size: 1em;
+  border-radius: 5px;
+  border: none;
+}
+ form .add-movie-btn{
+  background: #c0392b;
+  color: #fff;
+  padding: 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+form .add-movie-btn:hover{
+  background: #a93226;
 }
 .remove-movie-btn {
   background: #c0392b;
@@ -38,6 +52,7 @@ input, select, button {
 .remove-movie-btn:hover {
   background: #a93226;
 }
+
 #movies-container {
   display: flex;
   flex-wrap: wrap;
@@ -70,6 +85,7 @@ input, select, button {
   width: 100%;
   border-radius: 5px;
   background: #444;
+  height: 70vh;
 }
 .movie-title {
   font-size: 1.2em;
@@ -83,6 +99,12 @@ input, select, button {
   display: flex;
   gap: 4px;
   margin-top: 0.7em;
+}
+.add-review-form button{
+  cursor: pointer;
+}
+.rating-select{
+  height: 30px;
 }
 .review {
   background: #3338;

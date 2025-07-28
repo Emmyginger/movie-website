@@ -24,7 +24,7 @@ class Movie {
   display() {
     return `
       <div class="movie-card other">
-        <img src="${this.poster || 'https://via.placeholder.com/320x460?text=No+Image'}" alt="Poster">
+        <img src="${this.poster}" alt="Poster">
         <div class="movie-title">${this.title} <span style="float:right;">⭐ ${this.getUserRating()}</span></div>
         <div class="movie-meta"><b>Year:</b> ${this.year} <br><b>Genre:</b> ${this.genre}</div>
         <div class="movie-meta">${this.plot}</div>
@@ -36,7 +36,7 @@ class ActionMovie extends Movie {
   display() {
     return `
       <div class="movie-card action">
-        <img src="${this.poster || 'https://via.placeholder.com/320x460?text=No+Image'}" alt="Poster">
+        <img src="${this.poster}" alt="Poster">
         <div class="movie-title">${this.title} <span style="float:right;">💥</span></div>
         <div class="movie-meta"><span style="color:#e74c3c"><b>Action Movie</b></span><br>
         <b>Year:</b> ${this.year} | <b>⭐</b> ${this.getUserRating()}</div>
@@ -48,7 +48,7 @@ class ComedyMovie extends Movie {
   display() {
     return `
       <div class="movie-card comedy">
-        <img src="${this.poster || 'https://via.placeholder.com/320x460?text=No+Image'}" alt="Poster">
+        <img src="${this.poster }" alt="Poster">
         <div class="movie-title">${this.title} <span style="float:right;">😂</span></div>
         <div class="movie-meta"><span style="color:#f1c40f"><b>Comedy Movie</b></span><br>
         <b>Year:</b> ${this.year} | <b>⭐</b> ${this.getUserRating()}</div>
@@ -61,7 +61,7 @@ class RomanceMovie extends Movie {
   display() {
     return `
       <div class="movie-card romance">
-        <img src="${this.poster || 'https://via.placeholder.com/320x460?text=No+Image'}" alt="Poster">
+        <img src="${this.poster }" alt="Poster">
         <div class="movie-title">${this.title} <span style="float:right;">💖</span></div>
         <div class="movie-meta"><span style="color:#e170b4"><b>Romance Movie</b></span><br>
         <b>Year:</b> ${this.year} | <b>⭐</b> ${this.getUserRating()}</div>
