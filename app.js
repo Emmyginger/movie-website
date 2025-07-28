@@ -139,6 +139,7 @@ function renderMovies() {
           ${[1,2,3,4,5].map(val => `<option value="${val}" ${movie.getUserRating()==val?'selected':''}>${val}</option>`).join('')}
         </select>
       </div>
+      <button class="remove-movie-btn" data-idx="${idx}">🗑 Remove</button>
     </div>`);
     container.innerHTML += html;
   });
@@ -178,6 +179,23 @@ document.getElementById('movies-container').addEventListener('change', function 
     const idx = +e.target.getAttribute('data-idx');
     const rating = +e.target.value;
     user.getMovies()[idx].setUserRating(rating);
+    renderMovies();
+  }
+});
+
+// Remove a single movie by index
+document.getElementById('movies-container').addEventListener('click', function(e) {
+  if (e.target.classList.contains('remove-movie-btn')) {
+    const idx = +e.target.getAttribute('data-idx');
+    user.collection.splice(idx, 1);
+    renderMovies();
+  }
+});
+
+// Clear all movies
+document.getElementById('clear-all-movies').addEventListener('click', function() {
+  if (confirm('Delete your entire movie collection?')) {
+    user.collection = [];
     renderMovies();
   }
 });

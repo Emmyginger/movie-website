@@ -19,6 +19,22 @@ input, select, button {
   padding: 0.5em;
   font-size: 1em;
 }
+.remove-movie-btn {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 0.96em;
+  transition: background 0.2s;
+}
+.remove-movie-btn:hover {
+  background: #a93226;
+}
 #movies-container {
   display: flex;
   flex-wrap: wrap;
