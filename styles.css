@@ -48,6 +48,7 @@ form .add-movie-btn:hover{
   right: 12px;
   font-size: 0.96em;
   transition: background 0.2s;
+  opacity: 70%;
 }
 .remove-movie-btn:hover {
   background: #a93226;
